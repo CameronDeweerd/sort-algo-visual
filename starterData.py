@@ -1,4 +1,5 @@
 import random
+import copy
 
 
 class DataSet:
@@ -15,10 +16,11 @@ class DataSet:
         if start == "ordered":
             pass
 
-        print(self.values)
-
     def reverse_order(self):
-        reversed(self.values)
+        self.values.reverse()
 
     def random_order(self):
         random.shuffle(self.values)
+
+    def duplicate(self):
+        return copy.deepcopy(self)
